@@ -12,7 +12,7 @@
     margin: 0rem;
     line-height: 1.5;
     font-size: 1.1rem;
-    font-weight: normal;
+    font-weight: bold;
     text-decoration: underline blue;
     /* safari */
     -webkit-text-decoration-line: underline;
