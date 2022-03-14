@@ -11,6 +11,7 @@ export default function Layout({ children, home, dashboard }) {
     return (
         <>
             <Head>
+                <meta name="title" content={data.name} />
                 <meta httpEquiv='Content-Language' content={data.language} />
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="description" content={data.description} />
@@ -26,6 +27,7 @@ export default function Layout({ children, home, dashboard }) {
                 <meta name="twitter:description" content={data.description} />
                 <meta name="twitter:image" content={data.ogImage} />
                 <meta name="twitter:title" content={data.name} />
+                <title>{data.title}</title>
             </Head>
             <nav className={styles.nav}>
                 {dashboard ? (

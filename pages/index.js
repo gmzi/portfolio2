@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Logo from '../components/logo'
@@ -19,11 +18,6 @@ export default function Home({ projects }) {
 
   return (
     <Layout home>
-      <Head>
-        {/* Base meta tags */}
-        <meta name="title" content={data.name} />
-        <title>{data.title}</title>
-      </Head>
       <section>
         <h1 className={styles.title}>Projects</h1>
         <q className={styles.quote}>Ars longa, vita brevis.</q>
