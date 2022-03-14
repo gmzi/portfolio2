@@ -15,13 +15,17 @@ export default function Layout({ children, home, dashboard }) {
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="description" content={data.description} />
                 {/* OpenGraph */}
-                <meta property="og:site_name" content={data.name} />
                 <meta property="og:description" content={data.description} />
-                <meta property="og:image" content={data.ogImage} />
+                <meta property="og:title" content={data.description} />
+                <meta property="og:type" content="index" />
+                <meta property="og:site_name" content={data.name} />
+                <meta property="og:image:secure_url" content={data.ogImage} />
+                <meta property="og:url" content={BASE_URL} />
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary" />
                 <meta name="twitter:description" content={data.description} />
                 <meta name="twitter:image" content={data.ogImage} />
+                <meta name="twitter:title" content={data.name} />
             </Head>
             <nav className={styles.nav}>
                 {dashboard ? (

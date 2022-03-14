@@ -21,18 +21,7 @@ export default function Home({ projects }) {
     <Layout home>
       <Head>
         {/* Base meta tags */}
-        <meta name="description" content={data.description} />
         <meta name="title" content={data.name} />
-        {/* OpenGraph */}
-        <meta property="og:description" content={data.description} />
-        <meta property="og:image" content={data.ogImage} />
-        <meta property="og:site_name" content={data.name} />
-        <meta property="og:title" content={data.description} />
-        <meta property="og:type" content="index" />
-        <meta property="og:url" content={URL} />
-        {/* Twitter */}
-        <meta name="twitter:title" content={data.name} />
-
         <title>{data.title}</title>
       </Head>
       <section>

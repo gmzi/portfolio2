@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
 import styles from './project.module.css'
-import Javascript from '../lib/icons/javascript.js'
 
 export default function Project({ data }) {
 
