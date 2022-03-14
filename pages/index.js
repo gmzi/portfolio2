@@ -1,13 +1,6 @@
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
-import Logo from '../components/logo'
-import Footer from '../components/Footer'
 import Layout from '../components/layout'
 import Project from '../components/project'
-import utilStyles from '../styles/utils.module.css'
-import { data } from '../lib/data'
-
-const URL = process.env.NEXT_PUBLIC_URL;
 
 export default function Home({ projects }) {
 
