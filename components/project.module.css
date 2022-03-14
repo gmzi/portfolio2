@@ -11,16 +11,24 @@
 .container h2 {
     margin: 0rem;
     line-height: 1.5;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: normal;
-    text-decoration: underline 4px solid blue;
+    text-decoration: underline blue;
+    /* safari */
+    -webkit-text-decoration-line: underline;
+    -webkit-text-decoration-color: blue;
+    text-decoration-thickness: 1px;
     color: black;
 }
 
 .container h2:hover,
 .container h2:focus,
 .container h2:active {
-    text-decoration: underline 5px solid rgb(5, 243, 252);
+    text-decoration: underline blue;
+    /* safari */
+    -webkit-text-decoration-line: underline;
+    -webkit-text-decoration-color:blue;
+    text-decoration-thickness: 4px;
 }
 
 
