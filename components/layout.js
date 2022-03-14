@@ -19,7 +19,7 @@ export default function Layout({ children, home, dashboard }) {
                 <meta property="og:title" content={data.description} />
                 <meta property="og:type" content="index" />
                 <meta property="og:site_name" content={data.name} />
-                <meta property="og:image:secure_url" content={data.ogImage} />
+                <meta property="og:image" content={data.ogImage} />
                 <meta property="og:url" content={BASE_URL} />
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary" />
