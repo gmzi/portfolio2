@@ -29,6 +29,7 @@ export default function Layout({ children, home, dashboard }) {
                 <meta name="twitter:title" content={data.name} />
                 <title>{data.title}</title>
             </Head>
+
             <nav className={styles.nav}>
                 {dashboard ? (
                     // eslint-disable-next-line @next/next/no-html-link-for-pages

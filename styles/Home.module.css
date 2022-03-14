@@ -12,16 +12,14 @@
   align-items: center;
 }
 
-/* .title a {
-  color: #0070f3;
-  text-decoration: none;
+.imageContainer {
+  border: 12px solid red;
+
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-} */
+.borderCircle {
+  border-radius: 9999px;
+}
 
 .title {
   margin: 0rem;
