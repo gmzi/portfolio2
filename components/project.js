@@ -33,7 +33,7 @@ export default function Project({ data }) {
         <div className={styles.container}>
             {demoUrl() &&
                 <Link href={demoUrl()}>
-                    <a target="_blank"><h2>{data.name}</h2></a>
+                    <a target="_blank">{data.name}</a>
                 </Link>
             }
             <p>{data.description}</p>

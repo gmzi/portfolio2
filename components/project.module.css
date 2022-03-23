@@ -5,25 +5,20 @@
 }
 
 .container a {
-    display: inline;
-}
-
-.container h2 {
     margin: 0rem;
     line-height: 1.5;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-decoration: underline blue;
+    font-size: 1rem;
+    text-decoration: underline;
     /* safari */
     -webkit-text-decoration-line: underline;
     -webkit-text-decoration-color: blue;
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: .1rem;
     color: black;
 }
 
-.container h2:hover,
-.container h2:focus,
-.container h2:active {
+.container a:hover,
+.container a:focus,
+.container a:active {
     text-decoration: underline blue;
     /* safari */
     -webkit-text-decoration-line: underline;
@@ -34,6 +29,6 @@
 
 .container p {
   margin: 0;
-  font-size: 1rem;
+  font-size: .8rem;
   line-height: 1;
 }
