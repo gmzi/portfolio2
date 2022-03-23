@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Layout from '../components/layout'
 import Project from '../components/project'
@@ -25,7 +24,7 @@ export default function Home({ projects }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const request = await fetch(' https://api.github.com/users/gmzi/repos?sort=created')
   const projects = await request.json()
   return {

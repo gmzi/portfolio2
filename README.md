@@ -1,4 +1,4 @@
-Static page that displays all user's github public repos (name and homepage).
+Personal page that displays all user's github public repos.
 Uses github public API, and a Next.JS serverless function. 
 
 # Usage
