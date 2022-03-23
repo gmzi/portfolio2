@@ -9,6 +9,7 @@ export default function Project({ data }) {
             <Link href={data.html_url}>
                 <a target="_blank">{data.name}</a>
             </Link>
+            {/* <h2>{data.name}</h2> */}
             <p>{data.description}</p>
         </div >
     )

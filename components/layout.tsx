@@ -1,13 +1,19 @@
 import Head from 'next/head'
 import styles from './layout.module.css'
 import Link from 'next/link'
-import Logo from '../components/logo'
+import Logo from './logo'
 import Footer from './Footer'
 import { data } from '../lib/data'
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
-export default function Layout({ children, home, dashboard }) {
+export default function Layout({
+    children,
+    home
+}: {
+    children: React.ReactNode
+    home: boolean
+}) {
     return (
         <>
             <Head>
@@ -31,16 +37,11 @@ export default function Layout({ children, home, dashboard }) {
             </Head>
 
             <nav className={styles.nav}>
-                {dashboard ? (
-                    // eslint-disable-next-line @next/next/no-html-link-for-pages
-                    <a href="/"><Logo /></a>
-                ) : (
-                    <Link href="/">
-                        <a>
-                            <Logo />
-                        </a>
-                    </Link>
-                )}
+                <Link href="/">
+                    <a>
+                        <Logo />
+                    </a>
+                </Link>
             </nav>
             <div className={styles.container}>
                 <main className={styles.main}>{children}</main>
@@ -51,34 +52,29 @@ export default function Layout({ children, home, dashboard }) {
                         </Link>
                     </div>
                 )}
-                {/* <Footer /> */}
-                {home &&
-                    !dashboard &&
-                    <footer className={styles.footer}>
-                        <a
-                            href="https://github.com/gmzi"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            github
-                        </a>
-                        <a
-                            href="https://twitter.com/spiritusliteram"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            twitter
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/gastonmazieres"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            linkedin
-                        </a>
-                    </footer>
-
-                }
+                <footer className={styles.footer}>
+                    <a
+                        href="https://github.com/gmzi"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        github
+                    </a>
+                    <a
+                        href="https://twitter.com/spiritusliteram"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        twitter
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/gastonmazieres"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        linkedin
+                    </a>
+                </footer>
             </div>
         </>
     )

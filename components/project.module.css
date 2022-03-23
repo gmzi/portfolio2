@@ -6,13 +6,12 @@
 
 .container a {
     margin: 0rem;
-    line-height: 1.5;
-    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 700;
     text-decoration: underline;
     /* safari */
     -webkit-text-decoration-line: underline;
     -webkit-text-decoration-color: blue;
-    text-decoration-thickness: .1rem;
     color: black;
 }
 
