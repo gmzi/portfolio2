@@ -2,6 +2,7 @@ import styles from '../styles/Home.module.css'
 import Layout from '../components/layout'
 import Project from '../components/project'
 import { GetServerSideProps } from 'next'
+import { GetStaticProps } from 'next'
 
 export default function Home({
   projects
@@ -9,14 +10,16 @@ export default function Home({
   projects: {
     name: string
     html_url: string
-    description: string
+    description: string, 
+    fork: boolean,
   }[]
 }) {
 
-  const allProjects = projects.map((data, i) => (
-    <Project key={`${data.name}-${i}`} data={data} />
-  ))
-
+  const allProjects = projects.map((data, i) => {
+    if (!data.fork){
+      return <Project key={`${data.name}-${i}`} data={data} /> 
+    }
+  })
 
   return (
     <Layout home>
@@ -33,8 +36,7 @@ export default function Home({
   )
 }
 
-
-export const getServerSideProps: GetServerSideProps = async context => {
+export const getStaticProps: GetStaticProps = async context => {
   const request = await fetch(' https://api.github.com/users/gmzi/repos?sort=created')
   const projects = await request.json()
   return {
